@@ -1,0 +1,155 @@
+body {
+  width: 100%;
+  height: 100vh;
+  background: url("./bg.png");
+  background-size: cover;
+  overflow: hidden;
+}
+.div {
+  width: 100%;
+  margin: 30vh auto;
+  text-align: center;
+}
+
+.div h4,.div h1 {
+  color: #ffffff;
+  font-size: 4em;
+  font-weight: bold;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  height: 40px;
+  width: auto;
+  padding: 10px 40px;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 20px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  transition: all 0.25s ease-in-out;
+}
+
+label:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.no {
+  background-color: #d8124b;
+}
+
+.yes {
+  background-color: #12d890;
+}
+
+.answer--yes,
+.answer--no,.marry--yes,
+.marry--no {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.answer--yes {
+  background-image: url("https://media.giphy.com/media/a3IWyhkEC0p32/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.answer--no {
+  background-image: url("https://media.giphy.com/media/QBEhpJHrv7poQ/giphy.gif");
+  background-image: url("https://media.giphy.com/media/8TpEwyNgVypZm/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.marry--yes {
+    background-image: url("https://media.giphy.com/media/3ofT5DcR6SPuubL7qw/giphy.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .marry--no {
+    background-image: url("https://media.giphy.com/media/OPU6wzx8JrHna/giphy.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+input.yes[type="checkbox"]:checked ~ .answer--yes ,input.yes[type="checkbox"]:checked ~ .marry--yes {
+  visibility: visible;
+  opacity: 100;
+}
+
+input.no[type="checkbox"]:checked ~ .answer--no ,input.no[type="checkbox"]:checked ~ .marry--no {
+  visibility: visible;
+  opacity: 100;
+}
+.back {
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.clickbtn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+}
+.heart {
+  position: relative;
+  width: 20px;
+  height: 10px;
+  float: left;
+  position: absolute;
+  bottom: 100px;right: 100px;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+.heart:before,
+.heart:after {
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: #fc2e5a;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+.heart a{
+    position: relative;
+    z-index: 100;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;font-weight: 700;
+    font-size: 20px;top: 20px;left: 15px;
+}
+.heart:hover{
+    transform: scale(1.05);
+}
